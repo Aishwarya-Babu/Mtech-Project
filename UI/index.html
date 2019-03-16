@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="assets/main.css">
+    <script src="js/Script.js"></script>
+    <script src="js/app.js"></script>
+</head>
+<body ng-app = "starter">
+    <form ng-controller = "block_creator">
+      
+        <h1>Cast Your Vote</h1>
+    
+        <fieldset>
+          <label for="name">Voter ID:</label>
+          <input type="text" id="voter_id" name="voter_id" ng-model = "data.voter_id">
+          
+          <input type="radio" id="BJP" value="BJP" name="user_vote" ng-model = "data.voted_to"><label for="BJP" class="light">BJP</label><br>
+          <input type="radio" id="Congress" value="Congress" name="user_vote" ng-model = "data.voted_to"><label for="Congress" class="light">Congress</label><br>
+          <input type="radio" none_of_the_above="PP" value="none_of_the_above" name="user_vote" ng-model = "data.voted_to"><label for="none_of_the_above" class="light">None Of the Above</label>
+        </fieldset>
+        
+        </fieldset>
+        <button type="submit" ng-click = "make_block(data)">Submit</button>
+      </form>
+</body>
+</html>
